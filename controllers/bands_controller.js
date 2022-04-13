@@ -2,8 +2,6 @@
 const bands = require('express').Router()
 const db = require('../models')
 const { Band } = db 
-
-// DEPENDENCIES 
 const { Op } = require('sequelize')
 
 // FIND ALL BANDS
@@ -20,8 +18,6 @@ bands.get('/', async (req, res) => {
         res.status(500).json(error)
     }
 })
-
-
 
 // FIND A SPECIFIC BAND
 bands.get('/:id', async (req, res) => {
@@ -80,8 +76,5 @@ bands.delete('/:id', async (req, res) => {
     }
 })
 
-
 // EXPORT
 module.exports = bands
-   
-
